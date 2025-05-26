@@ -16,3 +16,15 @@ Find the length of 2nd highest word in the given sentence.
 Find the occurrence of each word in the given sentence.
 ### 06
 Find the words with a specified(2) number of vowels in the given sentence.
+### 07
+Divide given integer list into lists of even and odd numbers
+
+
+## Note
+1. Debugging Stream Operations:
+   **Trace Current Stream Chain**: This feature, accessible through the Debugger tool window, allows you to visualize the data as it passes through each operation in a stream chain. 
+2. **Split Mode vs. Flat Mode**: You can choose to view the stream operations either separately (Split Mode) or all at once (Flat Mode). 
+3. **Visual Representation**: The debugger provides a visual representation of how each element is transformed as it moves through the stream. 
+4. **Debug tool window**: View | Tool Windows | Debug or Alt 05.
+   
+This feature is only available for project files. Java Stream debugger doesn't work with libraries or decompiled code.
