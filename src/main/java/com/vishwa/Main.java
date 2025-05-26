@@ -2,6 +2,7 @@ package com.vishwa;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -9,13 +10,25 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello World");
-        one();
-        two();
-        two_1();
-        three();
-        four();
-        five();
-        six();
+//        one();
+//        two();
+//        two_1();
+//        three();
+//        four();
+//        five();
+//        six();
+        seven();
+    }
+
+    private static void seven() {
+        int [] ints = {1,2,3,4,5,6,7,8,9};
+        List<Integer> integerList = Arrays.stream(ints).boxed().toList();
+        Map<Boolean, List<Integer>> checkedList = integerList.stream().collect(Collectors.groupingBy(x->x%2==0, Collectors.toList()));
+        System.out.println(checkedList);
+
+        List<List<Integer>> listStream = integerList.stream().collect(Collectors.groupingBy(x -> x % 2 == 0, Collectors.toList()))
+                .entrySet().stream().map(x -> x.getValue()).collect(Collectors.toList());
+        System.out.println(listStream);
     }
 
     private static void six() {
