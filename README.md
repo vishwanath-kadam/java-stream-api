@@ -17,7 +17,20 @@ Find the occurrence of each word in the given sentence.
 ### 06
 Find the words with a specified(2) number of vowels in the given sentence.
 ### 07
-Divide given integer list into lists of even and odd numbers
+Find the even and odd numbers from the given integer list. 
+### 08
+Find the occurrence of each character from the given word.
+### 09
+Arrange the elements in descending order.
+### 10
+Find the sum of unique numbers from the given array.
+### 11
+Find the first non-repeated character from the given string.
+### 12
+### 13
+### 14
+### 15
+### 16
 
 
 ## Note

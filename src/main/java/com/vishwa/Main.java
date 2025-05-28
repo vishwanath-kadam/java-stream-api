@@ -1,9 +1,6 @@
 package com.vishwa;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -17,7 +14,50 @@ public class Main {
 //        four();
 //        five();
 //        six();
-        seven();
+//        seven();
+//        eight();
+//        nine();
+//        ten();
+        eleven();
+    }
+
+    private static void eleven() {
+        String str = "Hello World";
+        String nonRepeatedChar = Arrays.stream(str.split(""))
+                .filter(c -> str.indexOf(c) == str.lastIndexOf(c))
+                .findFirst().get();
+        System.out.println(nonRepeatedChar);
+
+        Map<Character, Long> characterLongMap = str.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(c -> c, LinkedHashMap::new, Collectors.counting()));
+        System.out.println(characterLongMap);
+
+        Character character = characterLongMap.entrySet().stream()
+                .filter(c -> c.getValue() == 1)
+                .findFirst().map(c -> c.getKey()).get();
+        System.out.println(character);
+
+    }
+
+    private static void ten() {
+        int[] ints = {1,6,7,8,1,1,8,8,7};
+        int sum = Arrays.stream(ints).distinct().sum();
+        System.out.println(sum);
+    }
+
+    private static void nine() {
+        int[] ints = {1,2,3,4,5};
+        Arrays.stream(ints)
+                .mapToObj(x->x)
+                .sorted(Comparator.reverseOrder())
+                .forEach(System.out::print);
+    }
+
+    private static void eight(){
+        String str = "Mississippi";
+        Map<String, Long> charCount = Arrays.stream(str.split("")).collect(Collectors.groupingBy(x -> x, Collectors.counting()));
+        System.out.println(charCount);
     }
 
     private static void seven() {
